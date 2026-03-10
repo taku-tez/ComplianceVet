@@ -55,7 +55,7 @@ func init() {
 	clusterCmd.Flags().StringVarP(&clusterFlagOutput, "output", "o", "text", "Output format: text|table|json")
 	clusterCmd.Flags().BoolVarP(&clusterFlagVerbose, "verbose", "v", false, "Show PASS and NOT_APPLICABLE results")
 	clusterCmd.Flags().BoolVar(&clusterFlagNoColor, "no-color", false, "Disable color output")
-	clusterCmd.Flags().StringVar(&clusterFlagMinSeverity, "min-severity", "", "Minimum severity: CRITICAL|HIGH|MEDIUM|LOW")
+	clusterCmd.Flags().StringVar(&clusterFlagMinSeverity, "min-severity", "", "Minimum severity: CRITICAL|HIGH|MEDIUM|LOW|INFO")
 	clusterCmd.Flags().StringSliceVar(&clusterFlagIgnore, "ignore", nil, "Rule IDs to skip")
 	clusterCmd.Flags().IntVar(&clusterFlagFailOnScore, "fail-on-score", 0, "Exit non-zero if score below N")
 	clusterCmd.Flags().IntVar(&clusterFlagTimeout, "timeout", 60, "API request timeout in seconds")

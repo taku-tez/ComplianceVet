@@ -20,6 +20,7 @@ const (
 	SeverityHigh     Severity = "HIGH"
 	SeverityMedium   Severity = "MEDIUM"
 	SeverityLow      Severity = "LOW"
+	SeverityInfo     Severity = "INFO"
 )
 
 // CISSection identifies which CIS benchmark section a rule belongs to.
@@ -76,7 +77,9 @@ func SeverityOrder(s Severity) int {
 		return 2
 	case SeverityLow:
 		return 3
-	default:
+	case SeverityInfo:
 		return 4
+	default:
+		return 5
 	}
 }

@@ -51,7 +51,7 @@ func init() {
 	scanCmd.Flags().StringVar(&flagBenchmark, "benchmark", "all", "Benchmark to run: all|cis|nsa|pci-dss")
 	scanCmd.Flags().StringSliceVarP(&flagSections, "section", "s", nil, "Sections to check: 1,2,3,4,5,6 (default all)")
 	scanCmd.Flags().StringSliceVar(&flagIgnore, "ignore", nil, "Rule IDs to skip (e.g. CV1001,CV2001)")
-	scanCmd.Flags().StringVar(&flagMinSeverity, "min-severity", "", "Minimum severity: CRITICAL|HIGH|MEDIUM|LOW")
+	scanCmd.Flags().StringVar(&flagMinSeverity, "min-severity", "", "Minimum severity: CRITICAL|HIGH|MEDIUM|LOW|INFO")
 	scanCmd.Flags().BoolVar(&flagNoColor, "no-color", false, "Disable color output")
 	scanCmd.Flags().IntVar(&flagFailOnScore, "fail-on-score", 0, "Exit non-zero if overall score below N")
 	scanCmd.Flags().BoolVarP(&flagRecursive, "recursive", "r", true, "Recursively scan directories")
